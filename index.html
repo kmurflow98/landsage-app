@@ -4,25 +4,33 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>landsage-app</title>
+    <title>Land Sage Insights — Feasibility Viewer (v0)</title>
+
+    <!-- Make CSS deterministic -->
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
+
   <body>
     <div id="app">
-  <div id="sidebar">
-    <h2>Land Sage Insights — Feasibility Viewer (v0)</h2>
-    <p>Search, draw an area, and visualize flood feasibility data.</p>
+      <div id="sidebar">
+        <h1>Land Sage Insights — Feasibility Viewer (v0)</h1>
+        <p>Search, draw an area, and visualize flood feasibility data.</p>
 
-    <label>Address</label>
-    <input id="addr" placeholder="e.g., 100 S Main St, Crown Point, IN" />
-    <button id="go">Search</button>
+        <label for="addr"><b>Address</b></label>
+        <input id="addr" type="text" placeholder="e.g., 100 S Main St, Crown Point, IN" />
+        <button id="go">Search</button>
 
-    <hr />
-    <h3>Results</h3>
-    <div id="results">Search an address or draw an AOI to begin.</div>
-  </div>
+        <hr />
 
-  <div id="map"></div>
-</div>
+        <h2>Results</h2>
+        <div id="results">Search an address or draw an AOI to begin.</div>
+      </div>
+
+      <!-- Leaflet renders here -->
+      <div id="map"></div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
+

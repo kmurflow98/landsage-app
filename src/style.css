@@ -1,8 +1,49 @@
-html, body { height: 100%; margin: 0; font-family: system-ui, Arial; }
-#app { height: 100vh; display: grid; grid-template-columns: 360px 1fr; }
-#sidebar { padding: 12px; border-right: 1px solid #ddd; overflow: auto; }
-#map { height: 100vh; }
-input { width: 100%; padding: 8px; margin: 6px 0 10px; }
-button { padding: 8px 10px; }
-hr { margin: 12px 0; }
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: system-ui, Arial;
+}
 
+#app {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  overflow: hidden;
+}
+
+#sidebar {
+  height: 100%;
+  padding: 16px;
+  border-right: 1px solid #ddd;
+  overflow: auto;
+  background: #fff;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 10px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+hr {
+  margin: 14px 0;
+}
+
+/* Make Leaflet controls look reasonable next to sidebar */
+.leaflet-container {
+  font: inherit;
+}
