@@ -7,7 +7,22 @@
     <title>landsage-app</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+  <div id="sidebar">
+    <h2>Land Sage Insights — Feasibility Viewer (v0)</h2>
+    <p>Search, draw an area, and visualize flood feasibility data.</p>
+
+    <label>Address</label>
+    <input id="addr" placeholder="e.g., 100 S Main St, Crown Point, IN" />
+    <button id="go">Search</button>
+
+    <hr />
+    <h3>Results</h3>
+    <div id="results">Search an address or draw an AOI to begin.</div>
+  </div>
+
+  <div id="map"></div>
+</div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
