@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@mapbox/mapbox-gl-draw": "^1.5.1",
+    "@terraformer/arcgis": "^2.1.2",
     "@turf/turf": "^7.3.1",
     "leaflet": "^1.9.4",
     "leaflet-draw": "^1.0.4",
