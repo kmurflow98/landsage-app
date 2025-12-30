@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 GeoJSON/
+
+# Local artifacts
+GeoJSON/
