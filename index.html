@@ -2,35 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Land Sage Insights — Feasibility Viewer (v0)</title>
-
-    <!-- Make CSS deterministic -->
+    <meta
+      name="description"
+      content="A preliminary parcel and floodplain screening tool from LandSage Insights for development and real estate professionals."
+    />
+    <title>Parcel Screening Tool | LandSage Insights</title>
     <link rel="stylesheet" href="/src/style.css" />
   </head>
 
   <body>
     <div id="app">
-      <div id="sidebar">
-        <h1>Land Sage Insights — Feasibility Viewer (v0)</h1>
-        <p>Search, draw an area, and visualize flood feasibility data.</p>
+      <aside id="sidebar" aria-label="Parcel screening controls">
+        <header class="brand">
+          <a class="brand-name" href="https://landsageinsights.com">LandSage Insights</a>
+          <span class="tool-label">Parcel Screening Tool</span>
+        </header>
 
-        <label for="addr"><b>Address</b></label>
-        <input id="addr" type="text" placeholder="e.g., 100 S Main St, Crown Point, IN" />
-        <button id="go">Search</button>
+        <section class="intro">
+          <h1>Screen a site before deeper due diligence.</h1>
+          <p>Search an address, draw the project area, and review preliminary FEMA flood-hazard information.</p>
+        </section>
 
-        <hr />
+        <section class="search-panel" aria-labelledby="search-heading">
+          <h2 id="search-heading">Find a property</h2>
+          <label for="addr">Address</label>
+          <input id="addr" type="text" autocomplete="street-address" placeholder="100 S Main St, Crown Point, IN" />
+          <button id="go" type="button">Search property</button>
+        </section>
 
-        <h2>Results</h2>
-        <div id="results">Search an address or draw an AOI to begin.</div>
-      </div>
+        <section class="results-panel" aria-labelledby="results-heading">
+          <h2 id="results-heading">Screening result</h2>
+          <div id="results" aria-live="polite">Search an address, then draw the site boundary on the map.</div>
+        </section>
 
-      <!-- Leaflet renders here -->
-      <div id="map"></div>
+        <aside class="professional-cta">
+          <strong>Need a documented review?</strong>
+          <p>LandSage supports acquisition, development, engineering, surveying, brokerage, and legal teams with zoning, floodplain, permitting, and parcel due diligence.</p>
+          <a href="https://landsageinsights.com/#contact">Request a professional review</a>
+        </aside>
+
+        <p class="disclaimer">Preliminary screening only. Results are not an official determination and should be verified through the applicable jurisdiction and source records.</p>
+      </aside>
+
+      <main id="map" aria-label="Interactive parcel screening map"></main>
     </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
-
